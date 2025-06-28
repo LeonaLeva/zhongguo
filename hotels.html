@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отели в Китае - Достопримечательности Китая</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Логотип Китайского туризма">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="attractions.html">Достопримечательности</a></li>
+                    <li class="active"><a href="hotels.html">Отели</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+</body>
+</html>
+    <main class="container">
+        <section class="hotels-header">
+            <h1>Рекомендуемые отели в Китае</h1>
+            <p class="subtitle">Подберите комфортное жилье рядом с главными достопримечательностями</p>
+        </section>
+
+        <section class="hotels-list">
+            <div class="hotel-card">
+                <div class="hotel-image-container">
+                    <img src="images/hotel1.jpg" alt="The Peninsula Beijing" class="hotel-image">
+                    <span class="hotel-rating">★★★★★</span>
+                </div>
+                <div class="hotel-details">
+                    <h3>The Peninsula Beijing</h3>
+                    <p class="hotel-location">📍 Пекин, 2.5 км от Запретного города</p>
+                    <p class="hotel-description">Роскошный 5-звездочный отель с видом на Запретный город. Просторные номера с традиционным китайским дизайном.</p>
+                    <div class="hotel-amenities">/
+                        <span>🏊 Бассейн</span>
+                        <span>🍽 Ресторан</span>
+                        <span>🏋️ Тренажерный зал</span>
+                    </div>
+                    <div class="hotel-actions">
+                        <button class="book-button" onclick="bookHotel('The Peninsula Beijing')">Забронировать</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image-container">
+                    <img src="images/hotel2.jpg" alt="Sofitel Legend Xian" class="hotel-image">
+                    <span class="hotel-rating">★★★★☆</span>
+                </div>
+                <div class="hotel-details">
+                    <h3>Sofitel Legend People's Grand Hotel Xian</h3>
+                    <p class="hotel-location">📍 Сиань, 1 км от Терракотовой армии</p>
+                    <p class="hotel-description">Исторический отель в здании 1953 года с современными удобствами. Идеальное место для знакомства с Терракотовой армией.</p>
+                    <div class="hotel-amenities">
+                        <span>🏊 Бассейн</span>
+                        <span>🍽 Завтрак</span>
+                        <span>🅿️ Парковка</span>
+                    </div>
+                    <div class="hotel-actions">
+                        <button class="book-button" onclick="bookHotel('Sofitel Legend Xian')">Забронировать</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image-container">
+                    <img src="images/hotel3.jpg" alt="Shaolin International Hotel" class="hotel-image">
+                    <span class="hotel-rating">★★★☆☆</span>
+                </div>
+                <div class="hotel-details">
+                    <h3>Shaolin International Hotel</h3>
+                    <p class="hotel-location">📍 Дэнфэн, 5 км от монастыря Шаолинь</p>
+                    <p class="hotel-description">Уютный отель с атмосферой кунг-фу. Предлагает экскурсии в монастырь Шаолинь и уроки боевых искусств.</p>
+                    <div class="hotel-amenities">
+                        <span>🍽 Ресторан</span>
+                        <span>🚐 Трансфер</span>
+                        <span>🧘 Тур по Шаолиню</span>
+                    </div>
+                    <div class="hotel-actions">
+                        <button class="book-button" onclick="bookHotel('Shaolin International Hotel')">Забронировать</button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Достопримечательности Китая. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        function bookHotel(hotelName) {
+            alert(`Вы выбрали бронирование отеля "${hotelName}". В реальном приложении здесь будет форма бронирования.`);
+            // В реальном приложении здесь будет переход на страницу бронирования
+        }
+
+        function showHotelDetails(hotelId) {
+            const details = {
+                'peninsula': {
+                    name: 'The Peninsula Beijing',
+                    description: '5-звездочный люксовый отель в центре Пекина с видом на Запретный город. Номера оформлены в традиционном китайском стиле с современными удобствами. Отель предлагает спа-центр, несколько ресторанов и бесплатный трансфер до основных достопримечательностей.',
+                    price: '$250 за ночь',
+                    amenities: ['Бесплатный Wi-Fi', 'Бассейн', 'Спа-центр', '3 ресторана', 'Фитнес-центр', 'Консьерж-сервис']
+                },
+                'sofitel': {
+                    name: 'Sofitel Legend People\'s Grand Hotel Xian',
+                    description: '4-звездочный отель класса люкс в историческом здании 1950-х годов. Расположен в непосредственной близости от музея Терракотовой армии. Отель сочетает французский шарм с китайской культурой.',
+                    price: '$180 за ночь',
+                    amenities: ['Бесплатный Wi-Fi', 'Бассейн', 'Завтрак "шведский стол"', 'Ресторан', 'Парковка', 'Экскурсионное бюро']
+                },
+                'shaolin': {
+                    name: 'Shaolin International Hotel',
+                    description: '3-звездочный отель в традиционном стиле у подножия горы Суншань. Специализируется на турах к монастырю Шаолинь. Предлагает уроки кунг-фу и цигун для гостей.',
+                    price: '$80 за ночь',
+                    amenities: ['Бесплатный Wi-Fi', 'Ресторан китайской кухни', 'Трансфер до монастыря', 'Экскурсии', 'Занятия кунг-фу']
+                }
+            };
+            
+            const hotel = details[hotelId];
+            let amenitiesList = hotel.amenities.map(item => `<li>${item}</li>`).join('');
+            
+            const detailMessage = `
+                <h3>${hotel.name}</h3>
+                <p><strong>Описание:</strong> ${hotel.description}</p>
+                <p><strong>Цена:</strong> ${hotel.price}</p>
+                <p><strong>Удобства:</strong></p>
+                <ul>${amenitiesList}</ul>
+            `;
+            
+            alert(detailMessage);
+            // В реальном приложении здесь будет переход на отдельную страницу с деталями
+        }
+    </script>
+</body>
+</html>

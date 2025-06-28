@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отели в Китае - Достопримечательности Китая</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Логотип Китайского туризма">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="attractions.html">Достопримечательности</a></li>
+                    <li ><a href="hotels.html">Отели</a></li>
+                    <li class="active"><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="contact-title">Свяжитесь с нами</h1>
+        <p class="contact-subtitle">Мы рады ответить на все ваши вопросы о путешествиях по Китаю</p>
+        
+        <div class="contact-container">
+            <section class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Наш адрес</h3>
+                    <p>100000, Китай, Пекин, ул. Чаоян, д. 15</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Телефоны</h3>
+                    <p>+86 10 1234 5678 (офис)</p>
+                    <p>+86 10 8765 4321 (горячая линия)</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Электронная почта</h3>
+                    <p>info@china-tourism.com</p>
+                    <p>support@china-tourism.com</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">🕒</div>
+                    <h3>Часы работы</h3>
+                    <p>Понедельник-Пятница: 9:00-18:00</p>
+                    <p>Суббота: 10:00-15:00</p>
+                    <p>Воскресенье: выходной</p>
+                </div>
+            </section>
+
+            <section class="contact-form-section">
+                <h2>Напишите нам сообщение</h2>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Ваше имя *</label>
+                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="Введите ваш email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Введите ваш телефон">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Тема сообщения</label>
+                        <select id="subject" name="subject">
+                            <option value="general">Общий вопрос</option>
+                            <option value="tours">Информация о турах</option>
+                            <option value="hotels">Бронирование отелей</option>
+                            <option value="feedback">Обратная связь</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Сообщение *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Напишите ваше сообщение здесь..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Отправить сообщение</button>
+                </form>
+            </section>
+        </div>
+
+        <section class="contact-map">
+            <h2>Мы на карте</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3054.755428061385!2d116.48058231536338!3d40.04156847941377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f05296e7142cb9%3A0x3f0e49c5d5b7042e!2sChaoyang%20St%2C%20Chao%20Yang%20Qu%2C%20Beijing%20Shi%2C%20China!5e0!3m2!1sen!2sru!4v1620000000000!5m2!1sen!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Достопримечательности Китая. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
