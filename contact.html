@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Отели в Китае - Достопримечательности Китая</title>
+    <title>Контакты - Достопримечательности Китая</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .page-transition {
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
-<body>
+<body class="page-transition">
     <header>
         <div class="container">
             <div class="logo">
@@ -16,7 +28,7 @@
                 <ul>
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="attractions.html">Достопримечательности</a></li>
-                    <li ><a href="hotels.html">Отели</a></li>
+                    <li><a href="hotels.html">Отели</a></li>
                     <li class="active"><a href="contact.html">Контакты</a></li>
                 </ul>
             </nav>
@@ -60,7 +72,7 @@
 
             <section class="contact-form-section">
                 <h2>Напишите нам сообщение</h2>
-                <form class="contact-form" action="#" method="post">
+                <form id="feedbackForm" class="contact-form" action="https://formspree.io/f/xrbkrona" method="POST">
                     <div class="form-group">
                         <label for="name">Ваше имя *</label>
                         <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
@@ -91,8 +103,13 @@
                         <textarea id="message" name="message" rows="5" required placeholder="Напишите ваше сообщение здесь..."></textarea>
                     </div>
                     
+                    <input type="hidden" name="_language" value="ru">
+                    <input type="hidden" name="_subject" value="Новое сообщение с сайта China-Tourism">
+                    <input type="hidden" name="_next" value="https://ваш_логин.github.io/china-tourism/thanks.html">
+                    
                     <button type="submit" class="submit-btn">Отправить сообщение</button>
                 </form>
+                <div id="formStatus"></div>
             </section>
         </div>
 
@@ -106,8 +123,46 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Достопримечательности Китая. Все права защищены.</p>
+            <p>&copy; 2023 Достопримечательности Китая. Все права защищены.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const status = document.getElementById('formStatus');
+            
+            status.innerHTML = '<p style="color: #3498db;">Отправка сообщения...</p>';
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    status.innerHTML = `
+                        <div style="background:#27ae60; color:white; padding:15px; border-radius:5px;">
+                            ✔ Сообщение успешно отправлено! Мы ответим вам в ближайшее время.
+                        </div>
+                    `;
+                    form.reset();
+                } else {
+                    throw new Error('Ошибка отправки');
+                }
+            })
+            .catch(error => {
+                status.innerHTML = `
+                    <div style="background:#e74c3c; color:white; padding:15px; border-radius:5px;">
+                        ✖ Ошибка при отправке. Пожалуйста, попробуйте позже или напишите нам на info@china-tourism.com
+                    </div>
+                `;
+            });
+        });
+    </script>
 </body>
 </html>
